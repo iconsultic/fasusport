@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FASUSPORT | Management & Motorsport Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                              url('img/hero-bg.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        #lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="" alt="Full size image">
+    </div>
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-24 items-center">
+                <div class="flex-shrink-0">
+                    <img class="h-12 md:h-16 w-auto" src="img/logo.png" alt="FASUSPORT">
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 font-semibold text-sm uppercase tracking-wider">
+                        <a href="#about" class="hover:text-blue-700 transition">Nosotros</a>
+                        <a href="#services" class="hover:text-blue-700 transition">Servicios</a>
+                        <a href="#approach" class="hover:text-blue-700 transition">Enfoque</a>
+                        <a href="#contact" class="bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Aceleramos marcas y personas en el universo del motor</h1>
+            <p class="text-xl md:text-2xl font-light mb-10 text-slate-200">
+                Estrategia, pasión y conocimiento especializado en el management de talentos y eventos de motorsport.
+            </p>
+            <a href="#services" class="bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-full text-lg font-bold transition transform hover:scale-105 inline-block">
+                Descubre nuestra actividad
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="img/about.webp" alt="QUIÉNES SOMOS" class="rounded-2xl shadow-2xl w-full aspect-square object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 border-l-4 border-blue-700 pl-4 uppercase">QUIÉNES SOMOS</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        FASUSPORT es una empresa especializada en comunicación y marketing que opera exclusivamente en el mundo del motor. Trabajamos con marcas de automoción, actores del motorsport y líderes del sector para reforzar su posicionamiento, aumentar su visibilidad y construir credibilidad a largo plazo mediante acciones inteligentes y altamente focalizadas.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-6 italic border-t pt-6">
+                        Nuestra fortaleza está en comprender tanto los objetivos comerciales de las marcas como la pasión del público del motor, y en conectar ambos de forma auténtica y natural.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold">Nuestra Actividad</h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Entendemos los códigos, el lenguaje y el ritmo del sector desde dentro.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <img src="img/sec-talent-es.webp" class="w-full aspect-[160/80] object-cover" alt="Talento">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-xl font-bold mb-4">Gestión de creadores y talento</h3>
+                        <p class="text-slate-600 text-sm">Representamos a periodistas e influencers de referencia del sector, garantizando colaboraciones con valor real para marcas y audiencias.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <img src="img/sec-strategy-es.webp" class="w-full aspect-[160/80] object-cover" alt="Estrategia">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-xl font-bold mb-4">Estrategia de comunicación</h3>
+                        <p class="text-slate-600 text-sm">Diseñamos y ejecutamos estrategias que refuerzan campañas de marketing existentes, utilizando los canales adecuados para generar credibilidad duradera.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <img src="img/sec-prod-es.webp" class="w-full aspect-[160/80] object-cover" alt="Producción">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-xl font-bold mb-4">Contenido y producción</h3>
+                        <p class="text-slate-600 text-sm">Supervisamos la producción de contenido de alta calidad para platforms digitales y sociales, alineado con los objetivos de comunicación.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 md:max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <img src="img/sec-event-es.webp" class="w-full aspect-[160/80] object-cover" alt="Eventos">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-xl font-bold mb-4">Eventos y experiencias en vivo</h3>
+                        <p class="text-slate-600 text-sm">Producción de eventos a medida: lanzamientos, prensa y activaciones experienciales con un enfoque en el impacto y el recuerdo.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
+                    <img src="img/sec-activ-es.webp" class="w-full aspect-[160/80] object-cover" alt="Activaciones">
+                    <div class="p-8 flex-grow">
+                        <h3 class="text-xl font-bold mb-4">Activaciones de marketing</h3>
+                        <p class="text-slate-600 text-sm">Conectamos marcas con el público mediante activaciones creativas tanto en entornos físicos (pista/carretera) como digitales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="py-24 bg-slate-900 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <span class="text-blue-400 font-bold tracking-widest uppercase text-sm">Filosofía</span>
+            <h2 class="text-4xl font-bold mt-4 mb-8">Nuestro Enfoque</h2>
+            <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+                El mundo del motor se mueve por la pasión, la historia y la emoción. Comunicar de forma eficaz en este sector exige autenticidad, conocimiento y respeto por la audiencia.
+            </p>
+            <div class="h-px w-24 bg-blue-700 mx-auto mb-8"></div>
+            <p class="text-2xl font-light italic">
+                En Fasusport <span class="text-blue-400 font-semibold">no buscamos atención</span>. <br class="hidden md:block">
+                Construimos relevancia, confianza e impacto duradero.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-2">Impacto en Escena</h2>
+            <p class="text-slate-500 mb-12">Click en las imágenes para ampliar</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="img/gal-1-th.webp" onclick="openLightbox('img/gal-1.webp')" class="w-full aspect-square object-cover rounded-lg cursor-pointer hover:scale-[1.02] transition shadow-md">
+                <img src="img/gal-2-th.webp" onclick="openLightbox('img/gal-2.webp')" class="w-full aspect-square object-cover rounded-lg cursor-pointer hover:scale-[1.02] transition shadow-md">
+                <img src="img/gal-3-th.webp" onclick="openLightbox('img/gal-3.webp')" class="w-full aspect-square object-cover rounded-lg cursor-pointer hover:scale-[1.02] transition shadow-md">
+                <img src="img/gal-4-th.webp" onclick="openLightbox('img/gal-4.webp')" class="w-full aspect-square object-cover rounded-lg cursor-pointer hover:scale-[1.02] transition shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-blue-700 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-8">¿Hablamos de tu próximo proyecto?</h2>
+            <a href="mailto:info@fasusport.com" class="text-3xl font-bold hover:underline decoration-2 underline-offset-8 transition">info@fasusport.com</a>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-950 text-slate-500 text-center text-sm">
+        <p>&copy; 2026 FASUSPORT S.L.U. - Estrategia, pasión y conocimiento.</p>
+    </footer>
+
+    <script>
+        function openLightbox(url) {
+            document.getElementById('lightbox-img').src = url;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
